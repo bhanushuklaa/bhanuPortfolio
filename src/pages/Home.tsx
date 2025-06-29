@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 const Home = () => {
   const [text, setText] = useState("");
-  const fullText = "Full Stack Developer";
+  const fullText = "Backend Developer";
 
   useEffect(() => {
     let index = 0;
@@ -27,7 +27,7 @@ const Home = () => {
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
             Hi, I'm{" "}
             <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent">
-              John Doe
+              Bhanu Pratap Shukla
             </span>
           </h1>
           <h2 className="text-2xl md:text-3xl text-gray-300 mb-8 h-12">
@@ -37,9 +37,8 @@ const Home = () => {
         </div>
 
         <div className="animate-fade-in animation-delay-300">
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-8">
-            I create beautiful, responsive websites and applications using modern technologies.
-            Welcome to my digital portfolio where creativity meets functionality.
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-8 text-justify">
+          I primarily work with <b>Flask, Django</b>, and <b>FastAPI</b>. Working with modern technologies that support <b>CI/CD pipeline integration</b>. Recently, I've been learning serverless architecture using <b>AWS Lambda and DynamoDB</b>. I also use GrapesJS for drag-and-drop interfaces. I have experience with various AWS services such as <b>S3, EC2, and Lambda, as well as Google Cloud Platform</b>. Additionally, I've built several web applications using Django, WebRTC, TailwindCSS, and other modern tools.
           </p>
         </div>
 

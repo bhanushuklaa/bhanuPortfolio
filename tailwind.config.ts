@@ -67,28 +67,25 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
-			},
-			keyframes: {
+			   },
+			   keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+				  from: { height: '0' },
+				  to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
+				  from: { height: 'var(--radix-accordion-content-height)' },
+				  to: { height: '0' }
+				},
+				grow: {
+				  '0%': { width: '0%' },
+				  '100%': {} 
 				}
-			},
-			animation: {
+			   },
+			   animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'grow-progress': 'grow 1.5s ease-out forwards'
 			}
 		}
 	},

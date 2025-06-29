@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { FileText } from "lucide-react";
@@ -6,45 +5,41 @@ import { FileText } from "lucide-react";
 const Resume = () => {
   const experience = [
     {
-      title: "Senior Full Stack Developer",
-      company: "Tech Solutions Inc.",
-      period: "2022 - Present",
-      description: "Lead development of web applications using React, Node.js, and cloud technologies. Mentor junior developers and collaborate with cross-functional teams."
+      title: "Backend Developer",
+      company: "Botlab Dynamics",
+      period: "2024 - Present",
+      description: "I'm a backend developer passionate about building scalable geospatial and drone-tech solutions using Python, FastAPI, and Django. With hands-on experience in  photogrammetry, and API design,I love turning complex systems into intuitive, cloud-ready applications.",
     },
     {
-      title: "Frontend Developer",
-      company: "Digital Agency Pro",
-      period: "2020 - 2022",
-      description: "Developed responsive websites and web applications for various clients. Specialized in React, Vue.js, and modern CSS frameworks."
+      title: "Summer Training",
+      company: "Techpile Technology Pvt. Ltd.",
+      period: "2021 - 2022",
+      description: "Developed responsive websites and web applications for various clients. Specialized in Django Framework using Python.",
     },
-    {
-      title: "Junior Web Developer",
-      company: "StartUp Ventures",
-      period: "2019 - 2020",
-      description: "Built and maintained company websites, implemented new features, and worked closely with the design team to create pixel-perfect interfaces."
-    }
   ];
 
   const education = [
     {
-      degree: "Bachelor of Computer Science",
-      school: "University of Technology",
-      period: "2015 - 2019",
-      description: "Focused on software engineering, algorithms, and web development. Graduated with honors."
+      degree: "Bachelor of Technology",
+      school: "GL Bajaj Instiute of Technology and Management",
+      period: "2022 - 2025",
+      description: "Focused on software engineering, algorithms, and web development. Graduated with honors.",
     },
     {
-      degree: "Full Stack Web Development Bootcamp",
-      school: "Code Academy",
-      period: "2019",
-      description: "Intensive 12-week program covering modern web development technologies and best practices."
-    }
+      degree: "Diploma in Computer Science",
+      school: "Ambition Institute of Technology",
+      period: "2019-2022",
+      description: "Successfully Completed Diploma in CSE with great learning and enthusiasm mind.",
+    },
   ];
 
   const certifications = [
-    "AWS Certified Developer",
-    "Google Cloud Professional",
-    "React Developer Certification",
-    "Node.js Certified Developer"
+    "Six months of Internship",
+    "Summer Training in Django Framwork",
+    "i3India Certificate for Cyber Security",
+    "Rinex Certificate for Full Stack Developer",
+    "CCC Certificate by NIELIT",
+    "Hackathon at Neuro Nest",
   ];
 
   return (
@@ -55,21 +50,26 @@ const Resume = () => {
             My <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Resume</span>
           </h1>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
-            Professional experience, education, and skills that define my journey as a developer.
+            Professional experience, education, and skills that define my journey as a Developer.
           </p>
-          <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-3 rounded-full">
-            <FileText className="mr-2 h-4 w-4" />
-            Download Resume
-          </Button>
+          <a href="/BhanuResume.pdf" download className="inline-block">
+            <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-3 rounded-full">
+              <FileText className="mr-2 h-4 w-4" />
+              Download Resume
+            </Button>
+          </a>
         </div>
 
         <div className="space-y-16">
-          {/* Experience */}
+          {/* Work Experience */}
           <section>
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Work Experience</h2>
             <div className="space-y-6">
               {experience.map((job, index) => (
-                <Card key={index} className="bg-white/10 backdrop-blur-md border-white/20">
+                <Card
+                  key={index}
+                  className="bg-white/10 backdrop-blur-md border-white/20 transition-transform duration-300 hover:scale-105"
+                >
                   <CardContent className="p-6">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                       <div>
@@ -90,7 +90,10 @@ const Resume = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Education</h2>
             <div className="space-y-6">
               {education.map((edu, index) => (
-                <Card key={index} className="bg-white/10 backdrop-blur-md border-white/20">
+                <Card
+                  key={index}
+                  className="bg-white/10 backdrop-blur-md border-white/20 transition-transform duration-300 hover:scale-105"
+                >
                   <CardContent className="p-6">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                       <div>
@@ -106,12 +109,15 @@ const Resume = () => {
             </div>
           </section>
 
-          {/* Skills & Certifications */}
+          {/* Certifications */}
           <section>
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Certifications</h2>
             <div className="grid md:grid-cols-2 gap-4">
               {certifications.map((cert, index) => (
-                <Card key={index} className="bg-white/10 backdrop-blur-md border-white/20">
+                <Card
+                  key={index}
+                  className="bg-white/10 backdrop-blur-md border-white/20 transition-transform duration-300 hover:scale-105"
+                >
                   <CardContent className="p-4 text-center">
                     <p className="text-white font-semibold">{cert}</p>
                   </CardContent>

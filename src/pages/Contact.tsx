@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { Github, Linkedin, Twitter, Phone, PhoneCall, MessageCircleMore } from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -127,35 +128,60 @@ const Contact = () => {
                 <div className="space-y-4">
                   <div>
                     <h4 className="text-white font-semibold">Email</h4>
-                    <p className="text-purple-400">john.doe@example.com</p>
+                    <p className="text-purple-400">sonushukla588777@gmail.com</p>
                   </div>
                   
                   <div>
                     <h4 className="text-white font-semibold">Phone</h4>
-                    <p className="text-purple-400">+1 (555) 123-4567</p>
+                    <p className="text-purple-400">+91-9696023201</p>
                   </div>
                   
                   <div>
                     <h4 className="text-white font-semibold">Location</h4>
-                    <p className="text-purple-400">San Francisco, CA</p>
+                    <p className="text-purple-400">Varanasi, UP, India</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="bg-white/10 backdrop-blur-md border-white/20">
+            <Card className="bg-white/10 backdrop-blur-md border-white/20 transition-transform duration-300 hover:scale-105">
               <CardContent className="p-8">
                 <h3 className="text-xl font-bold text-white mb-4">Follow Me</h3>
-                <div className="flex space-x-4">
-                  <Button variant="outline" size="sm" className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white">
-                    GitHub
-                  </Button>
-                  <Button variant="outline" size="sm" className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white">
-                    LinkedIn
-                  </Button>
-                  <Button variant="outline" size="sm" className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white">
-                    Twitter
-                  </Button>
+                <div className="flex flex-wrap gap-3">
+                  <a href="https://github.com/bhanushuklaa" target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" size="sm" className="flex items-center space-x-1 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white">
+                      <Github size={16} />
+                      <span>GitHub</span>
+                    </Button>
+                  </a>
+
+                  <a href="https://www.linkedin.com/in/bhanushuklaa/?original_referer=https%3A%2F%2Fgithub.com%2F" target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" size="sm" className="flex items-center space-x-1 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white">
+                      <Linkedin size={16} />
+                      <span>LinkedIn</span>
+                    </Button>
+                  </a>
+
+                  <a href="https://wa.me/919696023201" target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" size="sm" className="flex items-center space-x-1 border-green-400 text-green-400 hover:bg-green-400 hover:text-white">
+                      <MessageCircleMore size={16} />
+                      <span>WhatsApp</span>
+                    </Button>
+                  </a>
+
+                  <a href="https://twitter.com/#" target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" size="sm" className="flex items-center space-x-1 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white">
+                      <Twitter size={16} />
+                      <span>Twitter</span>
+                    </Button>
+                  </a>
+
+                  <a href="tel:+919999999999">
+                    <Button variant="outline" size="sm" className="flex items-center space-x-1 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white">
+                      <PhoneCall size={16} />
+                      <span>Call</span>
+                    </Button>
+                  </a>
                 </div>
               </CardContent>
             </Card>
